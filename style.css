@@ -315,9 +315,14 @@ header .container {
 }
 
 .logo-img {
-  height: 48px;
+  height: 58px;
   width: auto;
   display: block;
+  transition: height var(--transition-fast);
+}
+
+header.scrolled .logo-img {
+  height: 48px;
 }
 
 .footer-logo .logo-img {
