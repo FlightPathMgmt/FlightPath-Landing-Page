@@ -258,10 +258,8 @@ function initHubSpotForm() {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
 
-    // HubSpot Credentials configuration
-    // IMPORTANT: When you build your HubSpot form later, replace these placeholders with your actual IDs.
-    const portalId = 'YOUR_HUBSPOT_PORTAL_ID'; // Replace with your HubSpot HubID (e.g., 1234567)
-    const formGuid = 'YOUR_HUBSPOT_FORM_GUID'; // Replace with your HubSpot Form GUID
+    const portalId = '23279711'; // Replace with your HubSpot HubID (e.g., 1234567)
+    const formGuid = '3fa4dea9-142f-464c-8371-751a205e33cb'; // Replace with your HubSpot Form GUID
     
     const isConfigured = portalId !== 'YOUR_HUBSPOT_PORTAL_ID' && formGuid !== 'YOUR_HUBSPOT_FORM_GUID';
 
