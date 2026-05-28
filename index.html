@@ -812,7 +812,76 @@
             region: "na1",
             portalId: "23279711",
             formId: "3fa4dea9-142f-464c-8371-751a205e33cb",
-            target: "#hubspot-embed-form"
+            target: "#hubspot-embed-form",
+            cssRequired: `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+              
+              .hs-form, .hs-form * {
+                font-family: 'Inter', sans-serif !important;
+                box-sizing: border-box;
+              }
+              
+              .hs-form label, .hs-form legend {
+                font-family: 'Outfit', sans-serif !important;
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                color: #475569 !important;
+                letter-spacing: 0.05em !important;
+                text-transform: uppercase !important;
+              }
+              
+              .hs-form label span {
+                color: #64748b !important;
+                font-weight: 400 !important;
+                text-transform: none !important;
+              }
+              
+              .hs-input, .hs-form input, .hs-form textarea, .hs-form select {
+                background: #ffffff !important;
+                border: 1px solid rgba(9, 28, 60, 0.15) !important;
+                border-radius: 8px !important;
+                color: #091c3c !important;
+                font-family: 'Inter', sans-serif !important;
+                font-size: 1rem !important;
+                padding: 0.85rem 1.2rem !important;
+                transition: all 0.2s ease !important;
+                outline: none !important;
+                box-shadow: none !important;
+              }
+              
+              .hs-input:focus, .hs-form input:focus, .hs-form textarea:focus, .hs-form select:focus {
+                background: #ffffff !important;
+                border-color: #29abe2 !important;
+                box-shadow: 0 0 10px rgba(41, 171, 226, 0.15) !important;
+              }
+              
+              .hs-button, .hs-submit input, .hs_submit input {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                font-family: 'Outfit', sans-serif !important;
+                font-weight: 600 !important;
+                font-size: 0.95rem !important;
+                padding: 0.8rem 1.8rem !important;
+                border-radius: 50px !important;
+                cursor: pointer !important;
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                border: none !important;
+                background: linear-gradient(135deg, #29abe2 0%, #6cbd86 100%) !important;
+                color: #ffffff !important;
+                box-shadow: 0 4px 15px rgba(41, 171, 226, 0.2) !important;
+                width: 100% !important;
+              }
+              
+              .hs-button:hover, .hs-submit input:hover, .hs_submit input:hover {
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 20px rgba(41, 171, 226, 0.4), 0 0 20px rgba(41, 171, 226, 0.15) !important;
+              }
+              
+              .hs-richtext, .hs-field-desc, .hs-legal-consent__row, .hs-main-font-element {
+                font-size: 0.85rem !important;
+                color: #64748b !important;
+                line-height: 1.5 !important;
+              }`
           });
         </script>
 

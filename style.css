@@ -1556,3 +1556,95 @@ footer {
     padding: 1.5rem;
   }
 }
+
+/* ==========================================
+   HubSpot Form Style Overrides & Variables
+   ========================================== */
+:root {
+  /* Propagate CSS variables to HubSpot modern forms */
+  --hsf-global__font-family: 'Inter', sans-serif;
+  --hsf-global__color: var(--text-primary);
+  --hsf-label__font-family: 'Outfit', sans-serif;
+  --hsf-label__font-weight: 600;
+  --hsf-label__color: var(--text-secondary);
+  --hsf-field-input__font-family: 'Inter', sans-serif;
+  --hsf-field-input__color: var(--text-primary);
+  --hsf-button__font-family: 'Outfit', sans-serif;
+  --hsf-button__font-weight: 600;
+  --hsf-button__background: var(--grad-hero);
+  --hsf-button__color: var(--bg-color);
+}
+
+/* Fallback direct overrides for HubSpot Forms (for Raw HTML or DOM injection) */
+.hs-form, .hs-form * {
+  font-family: 'Inter', sans-serif !important;
+  box-sizing: border-box;
+}
+
+.hs-form label, .hs-form legend {
+  font-family: var(--font-headings) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hs-form label span {
+  color: var(--text-muted) !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+.hs-input, .hs-form input, .hs-form textarea, .hs-form select {
+  background: #ffffff !important;
+  border: 1px solid rgba(9, 28, 60, 0.15) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  padding: 0.85rem 1.2rem !important;
+  transition: all var(--transition-fast) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.hs-input:focus, .hs-form input:focus, .hs-form textarea:focus, .hs-form select:focus {
+  background: #ffffff !important;
+  border-color: var(--color-accent-blue) !important;
+  box-shadow: 0 0 10px rgba(41, 171, 226, 0.15) !important;
+}
+
+.hs-button, .hs-submit input, .hs_submit input {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-headings) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  padding: 0.8rem 1.8rem !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  transition: all var(--transition-normal) !important;
+  border: none !important;
+  background: var(--grad-hero) !important;
+  color: var(--bg-color) !important;
+  box-shadow: 0 4px 15px rgba(41, 171, 226, 0.2) !important;
+  width: 100% !important;
+}
+
+.hs-button:hover, .hs-submit input:hover, .hs_submit input:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(41, 171, 226, 0.4), var(--shadow-glow) !important;
+}
+
+.hs-richtext, .hs-field-desc, .hs-legal-consent__row, .hs-main-font-element {
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  line-height: 1.5 !important;
+}
+
