@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlightPath | Modern Charitable Giving & Disbursement Infrastructure</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="FlightPath offers secure, fully managed charitable giving and disbursement infrastructure for financial firms and platforms. Power your donor funds and execute payments accurately.">
+  <meta name="keywords" content="FlightPath, donor advised funds, charitable giving, disbursement, fintech, charity payment API, GiveWise">
+  <meta property="og:title" content="FlightPath | Charitable Giving & Disbursement Infrastructure">
+  <meta property="og:description" content="Secure, fully managed execution infrastructure that powers your firm's philanthropic offerings.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       Header & Navigation
+       ========================================== -->
+  <header>
+    <div class="container">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="FlightPath Logo" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="#stats" class="nav-link">Overview</a>
+        <a href="#problem-solution" class="nav-link">The Challenge</a>
+        <a href="#architecture" class="nav-link">Platform Layers</a>
+        <a href="#workflow" class="nav-link">How It Works</a>
+        <a href="#models" class="nav-link">Operating Models</a>
+        <a href="#contact" class="btn btn-primary">Request Demo</a>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Hero Section
+       ========================================== -->
+  <section id="hero">
+    <div class="container grid-2">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-shield-halved"></i> Production-proven giving infrastructure
+        </div>
+        <h1 class="hero-title">
+          A Modern Platform for <span>Charitable Giving</span> & Disbursement
+        </h1>
+        <p class="hero-desc">
+          Secure, fully managed execution infrastructure that powers your firm's philanthropic offerings. Maintain complete control over approvals while FlightPath handles the operational complexity.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Request Demo <i class="fas fa-arrow-right"></i></a>
+          <a href="#architecture" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow-bg"></div>
+        <div class="hero-svg-wrapper">
+          <svg viewBox="0 0 500 400" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grid lines for engineering aesthetic -->
+            <path d="M 0,50 L 500,50" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 0,150 L 500,150" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 0,250 L 500,250" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 0,350 L 500,350" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 100,0 L 100,400" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 250,0 L 250,400" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            <path d="M 400,0 L 400,400" stroke="rgba(9, 28, 60, 0.05)" stroke-width="1"/>
+            
+            <!-- Hexagon Mesh Background Pattern -->
+            <g class="hex-mesh" opacity="0.6">
+              <line x1="313.8" y1="130.0" x2="352.8" y2="152.5" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="430.7" y1="287.5" x2="430.7" y2="332.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="196.9" y1="287.5" x2="196.9" y2="332.5" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="469.7" y1="-5.0" x2="430.7" y2="17.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="469.7" y1="265.0" x2="508.7" y2="287.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="196.9" y1="197.5" x2="157.9" y2="220.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="274.9" y1="332.5" x2="235.9" y2="355.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="235.9" y1="130.0" x2="274.9" y2="152.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="274.9" y1="17.5" x2="274.9" y2="62.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="352.8" y1="197.5" x2="313.8" y2="220.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="508.7" y1="62.5" x2="547.7" y2="85.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="508.7" y1="332.5" x2="547.7" y2="355.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="196.9" y1="152.5" x2="196.9" y2="197.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="157.9" y1="220.0" x2="119.0" y2="197.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="274.9" y1="332.5" x2="313.8" y2="355.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="352.8" y1="332.5" x2="313.8" y2="355.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="119.0" y1="422.5" x2="80.0" y2="400.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="274.9" y1="62.5" x2="235.9" y2="85.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="352.8" y1="197.5" x2="391.8" y2="220.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="157.9" y1="355.0" x2="119.0" y2="332.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="547.7" y1="-5.0" x2="508.7" y2="17.5" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="430.7" y1="62.5" x2="391.8" y2="85.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="430.7" y1="332.5" x2="391.8" y2="355.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="430.7" y1="197.5" x2="391.8" y2="220.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="157.9" y1="130.0" x2="119.0" y2="152.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="352.8" y1="332.5" x2="391.8" y2="355.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="119.0" y1="287.5" x2="119.0" y2="332.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="274.9" y1="197.5" x2="235.9" y2="220.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="157.9" y1="220.0" x2="157.9" y2="265.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="508.7" y1="197.5" x2="469.7" y2="220.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="430.7" y1="62.5" x2="469.7" y2="85.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="430.7" y1="332.5" x2="469.7" y2="355.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="430.7" y1="197.5" x2="469.7" y2="220.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="469.7" y1="355.0" x2="469.7" y2="400.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="274.9" y1="197.5" x2="313.8" y2="220.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="508.7" y1="62.5" x2="469.7" y2="85.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="508.7" y1="332.5" x2="469.7" y2="355.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="274.9" y1="62.5" x2="313.8" y2="85.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="157.9" y1="265.0" x2="119.0" y2="287.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="313.8" y1="355.0" x2="313.8" y2="400.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="352.8" y1="62.5" x2="313.8" y2="85.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="119.0" y1="197.5" x2="80.0" y2="220.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="119.0" y1="287.5" x2="80.0" y2="265.0" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="391.8" y1="85.0" x2="391.8" y2="130.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="508.7" y1="152.5" x2="508.7" y2="197.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="469.7" y1="-5.0" x2="508.7" y2="17.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="196.9" y1="152.5" x2="157.9" y2="130.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="352.8" y1="152.5" x2="352.8" y2="197.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="313.8" y1="400.0" x2="274.9" y2="422.5" stroke="#73b680" stroke-width="1.8" opacity="0.7" />
+              <line x1="196.9" y1="197.5" x2="235.9" y2="220.0" stroke="#b0bec5" stroke-width="1.8" opacity="0.5" />
+              <line x1="352.8" y1="62.5" x2="391.8" y2="85.0" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <line x1="313.8" y1="-5.0" x2="274.9" y2="17.5" stroke="#0f733c" stroke-width="1.8" opacity="0.8" />
+              <circle cx="391.8" cy="-5.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="352.8" cy="17.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="547.7" cy="-5.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="508.7" cy="17.5" r="4" fill="#0f733c" />
+              <circle cx="274.9" cy="62.5" r="4" fill="#0f733c" />
+              <circle cx="235.9" cy="85.0" r="4" fill="#0f733c" />
+              <circle cx="352.8" cy="62.5" r="4" fill="#b0bec5" />
+              <circle cx="313.8" cy="85.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="508.7" cy="62.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="469.7" cy="85.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="235.9" cy="130.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="196.9" cy="152.5" r="4" fill="#0f733c" />
+              <circle cx="391.8" cy="130.0" r="4" fill="#0f733c" />
+              <circle cx="352.8" cy="152.5" r="4" fill="#0f733c" />
+              <circle cx="469.7" cy="130.0" r="4" fill="#73b680" />
+              <circle cx="430.7" cy="152.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="547.7" cy="130.0" r="4" fill="#0f733c" />
+              <circle cx="196.9" cy="197.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="157.9" cy="220.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="119.0" cy="197.5" r="4" fill="#0f733c" />
+              <circle cx="352.8" cy="197.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="313.8" cy="220.0" r="4" fill="#0f733c" />
+              <circle cx="508.7" cy="197.5" r="4" fill="#0f733c" />
+              <circle cx="469.7" cy="220.0" r="4" fill="#0f733c" />
+              <circle cx="547.7" cy="220.0" r="4" fill="#73b680" />
+              <circle cx="157.9" cy="265.0" r="4" fill="#b0bec5" />
+              <circle cx="119.0" cy="287.5" r="4" fill="#b0bec5" />
+              <circle cx="80.0" cy="265.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="80.0" cy="220.0" r="4" fill="#0f733c" />
+              <circle cx="235.9" cy="265.0" r="4" fill="#0f733c" />
+              <circle cx="313.8" cy="265.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="274.9" cy="287.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="469.7" cy="265.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="430.7" cy="287.5" r="4" fill="#0f733c" />
+              <circle cx="196.9" cy="332.5" r="4" fill="#0f733c" />
+              <circle cx="157.9" cy="355.0" r="4" fill="#0f733c" />
+              <circle cx="235.9" cy="355.0" r="4" fill="#b0bec5" />
+              <circle cx="352.8" cy="332.5" r="4" fill="#0f733c" />
+              <circle cx="430.7" cy="332.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="391.8" cy="355.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="547.7" cy="355.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="157.9" cy="400.0" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="119.0" cy="422.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+              <circle cx="80.0" cy="400.0" r="4" fill="#0f733c" />
+              <circle cx="313.8" cy="400.0" r="4" fill="#0f733c" />
+              <circle cx="274.9" cy="422.5" r="4" fill="#0f733c" />
+              <circle cx="352.8" cy="422.5" r="4" fill="#b0bec5" />
+              <circle cx="469.7" cy="400.0" r="4" fill="#0f733c" />
+              <circle cx="508.7" cy="422.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
+            </g>
+
+            <!-- Connection path curve -->
+            <path class="path-line" d="M 50,320 Q 150,80 250,180 T 450,80" stroke="url(#hero-grad)" stroke-width="5" stroke-linecap="round"/>
+            
+            <!-- Dynamic Glowing nodes -->
+            <circle cx="50" cy="320" r="8" fill="#29abe2" />
+            <circle cx="50" cy="320" r="16" fill="#29abe2" opacity="0.15" />
+            
+            <circle cx="218" cy="155" r="8" fill="#55a4a5" />
+            <circle cx="218" cy="155" r="16" fill="#55a4a5" opacity="0.15" />
+            
+            <circle cx="450" cy="80" r="8" fill="#6cbd86" />
+            <circle cx="450" cy="80" r="16" fill="#6cbd86" opacity="0.15" />
+            
+            <!-- Animated light particle moving along the curve path -->
+            <circle class="glow-point" r="6" fill="#ffffff" filter="drop-shadow(0px 0px 8px #6cbd86)"/>
+            
+            <defs>
+              <linearGradient id="hero-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#29abe2"/>
+                <stop offset="50%" stop-color="#55a4a5"/>
+                <stop offset="100%" stop-color="#6cbd86"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Proven Stats Section
+       ========================================== -->
+  <section id="stats">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Proven at Scale</span>
+        <h2 class="section-title">Scale and Stability You Can Trust</h2>
+        <p class="section-subtitle">
+          Built, tested, and continuously refined in live production environments handling institutional volumes.
+        </p>
+      </div>
+      
+      <div class="grid-3 stats-grid">
+        <div class="glass stat-card">
+          <div class="stat-number" data-target="2500">2,500</div>
+          <div class="stat-label">Active Giving Funds</div>
+          <div class="stat-desc">Set up and managed seamlessly on our infrastructure</div>
+        </div>
+        
+        <div class="glass stat-card">
+          <div class="stat-number" data-target="21000">21,000+</div>
+          <div class="stat-label">Grants Distributed</div>
+          <div class="stat-desc">Disbursed securely to more than 1,600 registered charities</div>
+        </div>
+        
+        <div class="glass stat-card">
+          <div class="stat-number" data-target="146000000">$146M</div>
+          <div class="stat-label">Total Contributions</div>
+          <div class="stat-desc">Processed across 7,500 individual contributions and gifts</div>
+        </div>
+      </div>
+
+      <div class="proven-footer">
+        <div class="proven-icon">
+          <i class="fas fa-arrows-spin"></i>
+        </div>
+        <div class="proven-text">
+          FlightPath powers <strong>GiveWise</strong>, a leading Canadian charitable giving platform operating in production. Together, this active volume and real-world deployment shape an infrastructure optimized for security, reliability, and regulatory compliance.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       The Challenge & The Solution
+       ========================================== -->
+  <section id="problem-solution">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Operational Efficiency</span>
+        <h2 class="section-title">Rethinking Charitable Operations</h2>
+        <p class="section-subtitle">
+          Traditional philanthropic services rely heavily on high-friction manual efforts. FlightPath automates the heavy lifting.
+        </p>
+      </div>
+
+      <div class="grid-2" style="position: relative;">
+        <!-- Challenge -->
+        <div class="glass problem-card">
+          <div class="pane-title">
+            <i class="fas fa-triangle-exclamation"></i>
+            <h3>The Operational Challenge</h3>
+          </div>
+          <div class="item-list">
+            <div class="list-item">
+              <i class="fas fa-circle-xmark"></i>
+              <div>
+                <div class="item-title">Manual processes across systems</div>
+                <div class="item-desc">Teams jump between banking systems, database registries, and files to process individual payments.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-xmark"></i>
+              <div>
+                <div class="item-title">Repetitive data collection</div>
+                <div class="item-desc">Banking details, addresses, and validation information are collected repeatedly and stored in silos.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-xmark"></i>
+              <div>
+                <div class="item-title">Operational burden on staff</div>
+                <div class="item-desc">Operations teams carry the daily load of resolving failures, manually tracking checks, and verifying charities.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-xmark"></i>
+              <div>
+                <div class="item-title">Inefficiencies & risk</div>
+                <div class="item-desc">Manual reviews increase processing lead times and introduce compliance, security, and administrative errors.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs-divider">VS</div>
+
+        <!-- Solution -->
+        <div class="glass solution-card">
+          <div class="pane-title">
+            <i class="fas fa-circle-check"></i>
+            <h3>The FlightPath Solution</h3>
+          </div>
+          <div class="item-list">
+            <div class="list-item">
+              <i class="fas fa-circle-check"></i>
+              <div>
+                <div class="item-title">Separated approval and execution</div>
+                <div class="item-desc">Your firm retains 100% control over approval policies, while our software executes the disbursements.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-check"></i>
+              <div>
+                <div class="item-title">Dedicated, secure payment rails</div>
+                <div class="item-desc">Transactions flow through automated clearance channels optimized for charity validation and settlement.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-check"></i>
+              <div>
+                <div class="item-title">Structured, unified data layers</div>
+                <div class="item-desc">All tracking, validation states, and banking records reside in a clean database layer with full audit trails.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <i class="fas fa-circle-check"></i>
+              <div>
+                <div class="item-title">Fully managed service delivery</div>
+                <div class="item-desc">Our infrastructure handles the operation, exceptions, and payment routing without burdening your internal team.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hook-banner">
+        <div class="hook-banner-glow"></div>
+        <div class="hook-content">
+          <div class="hook-text">
+            You approve the grant. We handle the <span>execution</span>.
+          </div>
+          <div class="hook-sub">
+            A clean transition from administrative overhead to smooth, automated execution.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       System Architecture Section
+       ========================================== -->
+  <section id="architecture">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Modular Architecture</span>
+        <h2 class="section-title">The Three Layers of FlightPath</h2>
+        <p class="section-subtitle">
+          Our platform comprises three distinct layers that function seamlessly together or integrate independently with your current software.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="donor">
+          <i class="fas fa-user-circle"></i> Donor Portal
+        </button>
+        <button class="tab-btn" data-tab="admin">
+          <i class="fas fa-sliders-h"></i> Admin Portal
+        </button>
+        <button class="tab-btn" data-tab="disbursement">
+          <i class="fas fa-network-wired"></i> Disbursement Infrastructure
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="glass tab-content-wrapper">
+        <!-- Tab 1: Donor Portal -->
+        <div class="tab-content active" id="layer-donor">
+          <div class="grid-2 arch-pane">
+            <div class="arch-info">
+              <div class="arch-title-wrap">
+                <div class="arch-icon-box">
+                  <i class="fas fa-user"></i>
+                </div>
+                <h3 class="arch-pane-title">Donor Portal</h3>
+              </div>
+              <p class="arch-pane-desc">
+                An optional, highly intuitive client-facing layer that allows donors to manage their philanthropic portfolios.
+              </p>
+              <div class="arch-bullet-list">
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Initiate and log recurring or one-time contributions into their fund.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Easily browse registered charities and submit grant recommendations.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Real-time dashboard to monitor fund balances and disbursement statuses.</span>
+                </div>
+              </div>
+            </div>
+            <div class="arch-diagram-pane">
+              <div class="arch-graphic flex-center">
+                <div class="layer-node glass active-node" data-node="donor" style="top: 110px; border-color: var(--color-accent-blue);">
+                  Donor Portal <span style="display:block; font-size:0.75rem; font-weight:400; color:var(--text-secondary);">Client Experience Layer</span>
+                </div>
+                <div class="layer-node glass" data-node="admin" style="top: 180px; opacity: 0.4;">
+                  Admin Portal (Firm Control)
+                </div>
+                <div class="layer-node glass" data-node="disbursement" style="top: 250px; opacity: 0.4;">
+                  Disbursement Infrastructure
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Admin Portal -->
+        <div class="tab-content" id="layer-admin">
+          <div class="grid-2 arch-pane">
+            <div class="arch-info">
+              <div class="arch-title-wrap">
+                <div class="arch-icon-box">
+                  <i class="fas fa-sliders"></i>
+                </div>
+                <h3 class="arch-pane-title">Admin Portal</h3>
+              </div>
+              <p class="arch-pane-desc">
+                The centralized control and oversight deck built specifically for your firm's compliance officers, advisors, and administrators.
+              </p>
+              <div class="arch-bullet-list">
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Maintain absolute veto power and review mechanisms for all recommendations.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Manage donor profiles, view comprehensive analytics, and set giving policies.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Access complete audit trails and generate firm-wide compliance reports.</span>
+                </div>
+              </div>
+            </div>
+            <div class="arch-diagram-pane">
+              <div class="arch-graphic flex-center">
+                <div class="layer-node glass" data-node="donor" style="top: 110px; opacity: 0.4;">
+                  Donor Portal (Client Experience)
+                </div>
+                <div class="layer-node glass active-node" data-node="admin" style="top: 180px; border-color: var(--color-accent-green);">
+                  Admin Portal <span style="display:block; font-size:0.75rem; font-weight:400; color:var(--text-secondary);">Control & Oversight Layer</span>
+                </div>
+                <div class="layer-node glass" data-node="disbursement" style="top: 250px; opacity: 0.4;">
+                  Disbursement Infrastructure
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Disbursement Infrastructure -->
+        <div class="tab-content" id="layer-disbursement">
+          <div class="grid-2 arch-pane">
+            <div class="arch-info">
+              <div class="arch-title-wrap">
+                <div class="arch-icon-box">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="arch-pane-title">Disbursement Infrastructure</h3>
+              </div>
+              <p class="arch-pane-desc">
+                The core engine of FlightPath. An automated, fully managed execution tier dedicated solely to moving funds from your institution to validated charities.
+              </p>
+              <div class="arch-bullet-list">
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Secure automated clearing house integrations and payment routing.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Continuous database updates for charity statuses, registrations, and payment routing.</span>
+                </div>
+                <div class="arch-bullet">
+                  <i class="fas fa-check"></i>
+                  <span>Exception handling, returning, and tracking are fully managed by FlightPath software.</span>
+                </div>
+              </div>
+            </div>
+            <div class="arch-diagram-pane">
+              <div class="arch-graphic flex-center">
+                <div class="layer-node glass" data-node="donor" style="top: 110px; opacity: 0.4;">
+                  Donor Portal (Client Experience)
+                </div>
+                <div class="layer-node glass" data-node="admin" style="top: 180px; opacity: 0.4;">
+                  Admin Portal (Firm Control)
+                </div>
+                <div class="layer-node glass active-node" data-node="disbursement" style="top: 250px; border-color: var(--color-light-blue);">
+                  Disbursement Infrastructure <span style="display:block; font-size:0.75rem; font-weight:400; color:var(--text-secondary);">Secure Execution Layer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Workflow Section
+       ========================================== -->
+  <section id="workflow">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">How it works</span>
+        <h2 class="section-title">The End-to-End Lifecycle</h2>
+        <p class="section-subtitle">
+          How recommendations flow securely from initial suggestion to final payment delivery.
+        </p>
+      </div>
+
+      <div class="flow-container">
+        <!-- Connector Line -->
+        <div class="flow-connector">
+          <div class="flow-progress-bar"></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="flow-step">
+          <div class="flow-number">01</div>
+          <h4 class="flow-step-title">Recommend</h4>
+          <p class="flow-step-desc">A grant is recommended via the donor portal, advisor interface, or API integration.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flow-step">
+          <div class="flow-number">02</div>
+          <h4 class="flow-step-title">Approve</h4>
+          <p class="flow-step-desc">The recommendation is approved within your firm's compliance controls & workflows.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flow-step">
+          <div class="flow-number">03</div>
+          <h4 class="flow-step-title">Validate</h4>
+          <p class="flow-step-desc">FlightPath automatically verifies the charity's registration and onboarding details.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flow-step">
+          <div class="flow-number">04</div>
+          <h4 class="flow-step-title">Execute</h4>
+          <p class="flow-step-desc">The digital payment is dispatched securely to the charity via optimized paths.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flow-step">
+          <div class="flow-number">05</div>
+          <h4 class="flow-step-title">Track</h4>
+          <p class="flow-step-desc">The transaction is reconciled and tracked to completion with complete audit visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       More Than Just Software Section
+       ========================================== -->
+  <section id="service">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Managed Delivery</span>
+        <h2 class="section-title">More Than Just Software</h2>
+        <p class="section-subtitle">
+          We combine a powerful code engine with a dedicated support layer to eliminate your back-office operational load.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="glass service-card">
+          <div class="service-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="service-title">Fully Managed Service</h3>
+          <p class="service-desc">
+            We don't just hand you API keys. FlightPath takes ownership of payment routing, ensuring funds arrive reliably at each organization.
+          </p>
+        </div>
+
+        <div class="glass service-card">
+          <div class="service-icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <h3 class="service-title">Exception Management</h3>
+          <p class="service-desc">
+            Bounced electronic transfers, outdated banking records, or address mismatches are investigated and resolved by FlightPath support.
+          </p>
+        </div>
+
+        <div class="glass service-card">
+          <div class="service-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="service-title">Zero Extra Overhead</h3>
+          <p class="service-desc">
+            Scale your philanthropic asset offerings infinitely without ever adding operational staff or increasing software licensing costs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Operating & Commercial Models
+       ========================================== -->
+  <section id="models">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Deployment & Commercials</span>
+        <h2 class="section-title">Flexible Operating Models</h2>
+        <p class="section-subtitle">
+          Select the model that fits your existing technology and matches your firm's operational structure.
+        </p>
+      </div>
+
+      <div class="grid-2 models-grid">
+        <!-- Model A: Full Platform -->
+        <div class="glass model-card" data-model="full">
+          <div class="model-header">
+            <span class="model-tag">Full Integration</span>
+            <h3 class="model-title">Full Platform</h3>
+            <p class="model-subtitle">A turnkey, end-to-end client giving experience.</p>
+          </div>
+          <div class="model-features">
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Includes the branded Donor Portal for direct client fund recommendations.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Full Admin Portal layer for advisor management and compliance checks.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Real-time dashboard and database synchronization across all users.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Unified structured giving files generated for easy ledger recording.</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Request Full Demo</a>
+        </div>
+
+        <!-- Model B: Admin-Only -->
+        <div class="glass model-card" data-model="admin">
+          <div class="model-header">
+            <span class="model-tag">Infrastructure Only</span>
+            <h3 class="model-title">Admin-Only</h3>
+            <p class="model-subtitle">Disbursement engine matched with your existing interfaces.</p>
+          </div>
+          <div class="model-features">
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Maintain your existing donor interfaces and advisor portals.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>FlightPath works strictly as the background execution & disbursement layer.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Integrate easily via our secure file system or custom API integrations.</span>
+            </div>
+            <div class="model-feature">
+              <i class="fas fa-check"></i>
+              <span>Completely invisible execution layer to your end donors.</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Request API Details</a>
+        </div>
+      </div>
+
+      <!-- Commercial model inside a glass card -->
+      <div class="glass comm-card" style="margin-top: 4rem;">
+        <div class="text-center" style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Commercial Model</h3>
+          <p style="color: var(--text-secondary);">Fee structures strictly aligned with your program's growth.</p>
+        </div>
+        <div class="comm-grid">
+          <div class="comm-item">
+            <div class="comm-label">
+              <i class="fas fa-cubes"></i> Platform & Service Fee
+            </div>
+            <p class="comm-desc">A predictable platform licensing fee covering ongoing updates, software licensing, and access to all portals.</p>
+          </div>
+          <div class="comm-item">
+            <div class="comm-label">
+              <i class="fas fa-receipt"></i> Transaction Fee
+            </div>
+            <p class="comm-desc">A per-disbursement fee aligned directly with transaction volumes. You pay exclusively for active execution.</p>
+          </div>
+          <div class="comm-item">
+            <div class="comm-label">
+              <i class="fas fa-gears"></i> Additional Services
+            </div>
+            <p class="comm-desc">Optional customization, specific data pipelines, and white-label branding configurations if required.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Contact / Lead Form
+       ========================================== -->
+  <section id="contact">
+    <div class="container contact-layout">
+      <!-- Contact Info -->
+      <div class="glass contact-info-panel">
+        <h2 class="contact-title">Let's build together</h2>
+        <p class="contact-desc">
+          Get in touch with us to request a sandbox demo, learn more about our integrations, or discuss how FlightPath can streamline your giving programs.
+        </p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="method-content">
+              <h4>Email Us</h4>
+              <p><a href="mailto:info@flightpathtech.ca">info@flightpathtech.ca</a></p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="method-content">
+              <h4>Powered By</h4>
+              <p>GiveWise Infrastructure Ltd.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <div class="glass form-panel">
+        <h3 class="form-title">Request Information</h3>
+        <p class="form-subtitle">Fill in the details below to sync with our integration pipeline.</p>
+        
+        <!-- =========================================================================
+             HUBSPOT INTEGRATION PLACEHOLDER
+             Since you are building the form in HubSpot later, you can use either option:
+             
+             OPTION A (Forms API / Keep Custom Styles):
+             Keep the beautiful glassmorphic HTML <form> below. When your HubSpot form is ready:
+             1. Find your HubSpot Portal ID and Form GUID.
+             2. Paste them into app.js inside the initHubSpotForm() function (line ~260).
+             3. Make sure form field names in HubSpot match: 'firstname', 'lastname', 'company', 'email'.
+             
+             OPTION B (Standard Script Embed / Default HubSpot Layout):
+             If you prefer to embed the default HubSpot form widget directly:
+             1. Comment out or delete the <form id="lead-form"> block below.
+             2. Uncomment the script tags below and insert your portalId and formId.
+             ========================================================================= -->
+        
+        <!-- HubSpot Embed Code Container (Uncomment if using Option B)
+        <div id="hubspot-embed-form"></div>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "na1",
+            portalId: "YOUR_HUBSPOT_PORTAL_ID",
+            formId: "YOUR_HUBSPOT_FORM_GUID",
+            target: "#hubspot-embed-form"
+          });
+        </script>
+        -->
+        
+        <form id="lead-form" class="contact-form">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" class="form-control" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name <span>(Optional)</span></label>
+              <input type="text" id="last-name" class="form-control" placeholder="Doe">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="company">Company / Firm *</label>
+            <input type="text" id="company" class="form-control" placeholder="Acme Wealth Advisory" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" class="form-control" placeholder="jane.doe@acme.com" required>
+          </div>
+          
+          <div id="form-status" class="form-status"></div>
+
+          <button type="submit" class="btn btn-primary form-submit-btn">
+            Submit Request <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <footer>
+    <div class="container footer-layout">
+      <div class="footer-left">
+        <div class="logo footer-logo">
+          <img src="logo_white.png" alt="FlightPath Logo" class="logo-img">
+        </div>
+        <p class="footer-copy">&copy; 2026 FlightPath Systems. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#stats" class="footer-nav-link">Overview</a>
+        <a href="#architecture" class="footer-nav-link">Architecture</a>
+        <a href="#models" class="footer-nav-link">Pricing</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Custom Interaction Script -->
+  <script src="app.js"></script>
+</body>
+</html>
