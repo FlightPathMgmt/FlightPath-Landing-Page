@@ -1264,6 +1264,20 @@ textarea.form-control {
   box-shadow: 0 0 10px rgba(41, 171, 226, 0.15);
 }
 
+.form-privacy-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: -0.5rem;
+}
+
+.form-privacy-note i {
+  color: var(--color-accent-green);
+  font-size: 0.9rem;
+}
+
 .form-submit-btn {
   margin-top: 1rem;
   width: 100%;
