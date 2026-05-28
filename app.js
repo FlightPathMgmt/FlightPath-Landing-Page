@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArchitectureTabs();
   initWorkflowObserver();
   initHubSpotForm();
+  initEmailLink();
 });
 
 /* ==========================================
@@ -290,7 +291,7 @@ function initHubSpotForm() {
         });
 
         if (response.ok) {
-          showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully.');
+          showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully. We will be in touch shortly.');
           form.reset();
         } else {
           const errorData = await response.json();
@@ -313,7 +314,7 @@ function initHubSpotForm() {
       console.groupEnd();
 
       setTimeout(() => {
-        showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully.');
+        showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully. We will be in touch shortly.');
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
         form.reset();
@@ -326,4 +327,32 @@ function initHubSpotForm() {
     statusEl.classList.add(type);
     statusEl.style.display = 'flex';
   }
+}
+
+/* ==========================================
+   Email Link Clipboard Fallback Handler
+   ========================================== */
+function initEmailLink() {
+  const emailLink = document.querySelector('.contact-method');
+  if (!emailLink) return;
+
+  const emailTextEl = emailLink.querySelector('.method-content p');
+  if (!emailTextEl) return;
+
+  const originalEmail = emailTextEl.textContent.trim();
+
+  emailLink.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(originalEmail);
+      
+      // Provide visual feedback
+      emailTextEl.innerHTML = '<span style="color: var(--color-accent-green); font-weight: 600;"><i class="fas fa-check"></i> Copied to clipboard!</span>';
+      
+      setTimeout(() => {
+        emailTextEl.textContent = originalEmail;
+      }, 2500);
+    } catch (err) {
+      console.warn('Clipboard copy failed:', err);
+    }
+  });
 }
