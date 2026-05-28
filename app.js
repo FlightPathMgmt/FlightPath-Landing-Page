@@ -238,6 +238,7 @@ function initHubSpotForm() {
     const lastName = form.querySelector('#last-name').value.trim();
     const company = form.querySelector('#company').value.trim();
     const email = form.querySelector('#email').value.trim();
+    const message = form.querySelector('#message').value.trim();
     const submitBtn = form.querySelector('.form-submit-btn');
 
     // Validation
@@ -269,7 +270,8 @@ function initHubSpotForm() {
         { name: 'email', value: email },
         { name: 'firstname', value: firstName },
         { name: 'lastname', value: lastName || '' },
-        { name: 'company', value: company }
+        { name: 'company', value: company },
+        { name: 'message', value: message || '' }
       ],
       context: {
         pageUri: window.location.href,
@@ -307,7 +309,7 @@ function initHubSpotForm() {
       console.group('%c[FlightPath HubSpot Form - Demo Mode]', 'color: #29abe2; font-weight: bold;');
       console.log('Form submission simulated successfully!');
       console.log('To link this form to your live HubSpot portal, replace the placeholder IDs in app.js around line 260 with your Portal ID and Form GUID.');
-      console.log('Submitted Data:', { firstName, lastName, company, email });
+      console.log('Submitted Data:', { firstName, lastName, company, email, message });
       console.groupEnd();
 
       setTimeout(() => {
