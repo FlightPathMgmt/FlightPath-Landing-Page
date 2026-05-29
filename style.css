@@ -1648,3 +1648,13 @@ footer {
   line-height: 1.5 !important;
 }
 
+.submitted-message, .submitted-message * {
+  font-family: var(--font-headings) !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  line-height: 1.4 !important;
+  margin-top: 1rem !important;
+}
+
+
