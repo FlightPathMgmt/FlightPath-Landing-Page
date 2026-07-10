@@ -187,30 +187,26 @@
               <circle cx="508.7" cy="422.5" r="4" fill="#ffffff" stroke="#0f733c" stroke-width="2" />
             </g>
 
-            <!-- Connection path curve -->
-            <path class="path-line" d="M 50,320 Q 150,80 250,180 T 450,80" stroke="url(#hero-grad)" stroke-width="5" stroke-linecap="round"/>
-            
-            <!-- Dynamic Glowing nodes -->
-            <circle cx="50" cy="320" r="8" fill="#29abe2" />
-            <circle cx="50" cy="320" r="16" fill="#29abe2" opacity="0.15" />
-            
-            <circle cx="218" cy="155" r="8" fill="#55a4a5" />
-            <circle cx="218" cy="155" r="16" fill="#55a4a5" opacity="0.15" />
-            
-            <circle cx="450" cy="80" r="8" fill="#6cbd86" />
-            <circle cx="450" cy="80" r="16" fill="#6cbd86" opacity="0.15" />
-            
-            <!-- Animated light particle moving along the curve path -->
-            <circle class="glow-point" r="6" fill="#ffffff" filter="drop-shadow(0px 0px 8px #6cbd86)"/>
-            
-            <defs>
-              <linearGradient id="hero-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#29abe2"/>
-                <stop offset="50%" stop-color="#55a4a5"/>
-                <stop offset="100%" stop-color="#6cbd86"/>
-              </linearGradient>
-            </defs>
-          </svg>
+             <!-- Connection path curve -->
+             <path class="path-line" d="M 50,320 Q 150,80 250,180 T 450,80" stroke="#008744" stroke-width="5" stroke-linecap="round"/>
+             
+             <!-- Dynamic Glowing nodes -->
+             <circle cx="50" cy="320" r="8" fill="#091c3c" />
+             <circle cx="50" cy="320" r="16" fill="#091c3c" opacity="0.15" />
+             
+             <circle cx="218" cy="155" r="8" fill="#008744" />
+             <circle cx="218" cy="155" r="16" fill="#008744" opacity="0.15" />
+             
+             <circle cx="450" cy="80" r="8" fill="#008744" />
+             <circle cx="450" cy="80" r="16" fill="#008744" opacity="0.15" />
+             
+             <!-- Animated light particle moving along the curve path -->
+             <circle class="glow-point" r="6" fill="#ffffff" filter="drop-shadow(0px 0px 8px #008744)"/>
+             
+             <defs>
+               <!-- Defs kept for future filters or markers, linearGradient removed -->
+             </defs>
+           </svg>
         </div>
       </div>
     </div>
@@ -825,7 +821,7 @@
               }
               
               .hs-form label, .hs-form legend {
-                font-family: 'Outfit', sans-serif !important;
+                font-family: 'Inter', sans-serif !important;
                 font-size: 0.85rem !important;
                 font-weight: 600 !important;
                 color: #475569 !important;
@@ -854,15 +850,15 @@
               
               .hs-input:focus, .hs-form input:focus, .hs-form textarea:focus, .hs-form select:focus {
                 background: #ffffff !important;
-                border-color: #29abe2 !important;
-                box-shadow: 0 0 10px rgba(41, 171, 226, 0.15) !important;
+                border-color: #008744 !important;
+                box-shadow: none !important;
               }
               
               .hs-button, .hs-submit input, .hs_submit input {
                 display: inline-flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                font-family: 'Outfit', sans-serif !important;
+                font-family: 'Inter', sans-serif !important;
                 font-weight: 600 !important;
                 font-size: 0.95rem !important;
                 padding: 0.8rem 1.8rem !important;
@@ -870,15 +866,16 @@
                 cursor: pointer !important;
                 transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
                 border: none !important;
-                background: linear-gradient(135deg, #29abe2 0%, #6cbd86 100%) !important;
+                background: #091c3c !important;
                 color: #ffffff !important;
-                box-shadow: 0 4px 15px rgba(41, 171, 226, 0.2) !important;
+                box-shadow: none !important;
                 width: 100% !important;
               }
               
               .hs-button:hover, .hs-submit input:hover, .hs_submit input:hover {
-                transform: translateY(-2px) !important;
-                box-shadow: 0 6px 20px rgba(41, 171, 226, 0.4), 0 0 20px rgba(41, 171, 226, 0.15) !important;
+                transform: translateY(-1px) !important;
+                background: #0c254e !important;
+                box-shadow: none !important;
               }
               
               .hs-richtext, .hs-field-desc, .hs-legal-consent__row, .hs-main-font-element {
