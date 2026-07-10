@@ -6,7 +6,7 @@
 /* ==========================================
    Google Fonts Import
    ========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ==========================================
    Design System Tokens (CSS Variables)
@@ -55,6 +55,7 @@
   /* Fonts */
   --font-headings: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
 }
 
 /* ==========================================
@@ -155,7 +156,7 @@ section {
 
 .section-tag {
   display: inline-block;
-  font-family: var(--font-headings);
+  font-family: var(--font-serif);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -384,6 +385,7 @@ header.scrolled .logo-img {
   background: #f4f6f8;
   border: 1px solid #cbd5e1;
   color: var(--color-primary);
+  font-family: var(--font-serif);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.4rem 1rem;
@@ -581,6 +583,7 @@ header.scrolled .logo-img {
 
 .spotlight-tag {
   display: inline-block;
+  font-family: var(--font-serif);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1111,6 +1114,7 @@ header.scrolled .logo-img {
 
 .model-tag {
   display: inline-block;
+  font-family: var(--font-serif);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
