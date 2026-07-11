@@ -310,14 +310,14 @@ header .container {
 }
 
 .logo-img {
-  height: 58px;
+  height: 68px;
   width: auto;
   display: block;
   transition: height var(--transition-fast);
 }
 
 header.scrolled .logo-img {
-  height: 48px;
+  height: 56px;
 }
 
 .footer-logo .logo-img {
