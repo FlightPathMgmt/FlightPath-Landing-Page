@@ -691,7 +691,7 @@ header.scrolled .logo-img {
 }
 
 .problem-card {
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid #64748b;
 }
 
 .solution-card {
@@ -708,7 +708,7 @@ header.scrolled .logo-img {
 }
 
 .problem-card .pane-title {
-  color: #ef4444;
+  color: #334155;
 }
 
 .solution-card .pane-title {
@@ -733,7 +733,7 @@ header.scrolled .logo-img {
 }
 
 .problem-card i {
-  color: #ef4444;
+  color: #64748b;
 }
 
 .solution-card i {
@@ -1666,8 +1666,18 @@ footer {
   font-size: 1.15rem !important;
   font-weight: 600 !important;
   color: var(--text-primary) !important;
-  line-height: 1.4 !important;
+  line-height: 1.6 !important;
   margin-top: 1rem !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+#hubspot-embed-form iframe {
+  min-height: 100px !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 
