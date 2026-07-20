@@ -292,6 +292,36 @@
             <i class="fas fa-triangle-exclamation"></i>
             <h3>The Operational Challenge</h3>
           </div>
+
+          <!-- Visual Diagram for Challenge -->
+          <div class="card-diagram challenge-diagram mb-4 p-3 rounded-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+            <svg viewBox="0 0 500 115" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+              <!-- Silos -->
+              <rect x="15" y="15" width="120" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="75" y="38" text-anchor="middle" fill="#475569" font-weight="600" font-size="11" font-family="Inter, sans-serif">Banking Portals</text>
+              
+              <rect x="15" y="62" width="120" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="75" y="85" text-anchor="middle" fill="#475569" font-weight="600" font-size="11" font-family="Inter, sans-serif">Excel &amp; Data Silos</text>
+
+              <!-- Disconnected Arrows -->
+              <path d="M135 34 H 195" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+              <path d="M135 81 H 195" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+              <!-- Central Bottleneck -->
+              <rect x="195" y="24" width="110" height="67" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+              <circle cx="250" cy="46" r="11" fill="#f1f5f9"/>
+              <path d="M250 40 V48 M250 50 V52" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+              <text x="250" y="74" text-anchor="middle" fill="#334155" font-weight="700" font-size="10" font-family="Inter, sans-serif">Manual Bottleneck</text>
+
+              <!-- Disconnected Arrow Out -->
+              <path d="M305 57 H 365" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+              <!-- Result -->
+              <rect x="365" y="38" width="120" height="38" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+              <text x="425" y="61" text-anchor="middle" fill="#64748b" font-weight="600" font-size="11" font-family="Inter, sans-serif">High Risk &amp; Lag</text>
+            </svg>
+          </div>
+
           <div class="item-list">
             <div class="list-item">
               <i class="fas fa-circle-xmark"></i>
@@ -317,7 +347,7 @@
             <div class="list-item">
               <i class="fas fa-circle-xmark"></i>
               <div>
-                <div class="item-title">Inefficiencies & risk</div>
+                <div class="item-title">Inefficiencies &amp; risk</div>
                 <div class="item-desc">Manual reviews increase processing lead times and introduce compliance, security, and administrative errors.</div>
               </div>
             </div>
@@ -333,6 +363,36 @@
             <i class="fas fa-circle-check"></i>
             <h3>The FlightPath Solution</h3>
           </div>
+
+          <!-- Visual Diagram for Solution -->
+          <div class="card-diagram solution-diagram mb-4 p-3 rounded-3" style="background: #ffffff; border: 1px solid #dcfce7; box-shadow: 0 4px 12px rgba(0, 135, 68, 0.05);">
+            <svg viewBox="0 0 500 115" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+              <!-- Node 1 -->
+              <rect x="15" y="32" width="125" height="50" rx="10" fill="#ffffff" stroke="#091c3c" stroke-width="1.5"/>
+              <text x="77" y="55" text-anchor="middle" fill="#091c3c" font-weight="700" font-size="11" font-family="Inter, sans-serif">Advisor Approvals</text>
+              <text x="77" y="69" text-anchor="middle" fill="#64748b" font-weight="500" font-size="9" font-family="Inter, sans-serif">100% Policy Control</text>
+              
+              <!-- Arrow 1 -->
+              <path d="M140 57 H 193" stroke="#008744" stroke-width="2.5" stroke-linecap="round"/>
+              <polygon points="193,53 201,57 193,61" fill="#008744"/>
+
+              <!-- Central Core Engine -->
+              <rect x="201" y="24" width="118" height="66" rx="12" fill="#091c3c"/>
+              <circle cx="260" cy="46" r="11" fill="#008744"/>
+              <path d="M255 46 L259 50 L266 42" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="260" y="74" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="10" font-family="Inter, sans-serif">FlightPath Rails</text>
+
+              <!-- Arrow 2 -->
+              <path d="M319 57 H 372" stroke="#008744" stroke-width="2.5" stroke-linecap="round"/>
+              <polygon points="372,53 380,57 372,61" fill="#008744"/>
+
+              <!-- Node 3 -->
+              <rect x="380" y="32" width="105" height="50" rx="10" fill="#f0fdf4" stroke="#008744" stroke-width="1.5"/>
+              <text x="432" y="55" text-anchor="middle" fill="#008744" font-weight="700" font-size="11" font-family="Inter, sans-serif">Charity Settlement</text>
+              <text x="432" y="69" text-anchor="middle" fill="#15803d" font-weight="500" font-size="9" font-family="Inter, sans-serif">Instant &amp; Audited</text>
+            </svg>
+          </div>
+
           <div class="item-list">
             <div class="list-item">
               <i class="fas fa-circle-check"></i>
