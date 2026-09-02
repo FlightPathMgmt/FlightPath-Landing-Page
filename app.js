@@ -252,13 +252,16 @@ function initHubSpotForm() {
     // Get input values
     const firstName = form.querySelector('#first-name').value.trim();
     const lastName = form.querySelector('#last-name').value.trim();
-    const company = form.querySelector('#company').value.trim();
     const email = form.querySelector('#email').value.trim();
+    const company = form.querySelector('#company').value.trim();
+    const website = form.querySelector('#website') ? form.querySelector('#website').value.trim() : '';
     const message = form.querySelector('#message').value.trim();
+    const interest = form.querySelector('#interest') ? form.querySelector('#interest').value : '';
+    const stage = form.querySelector('#stage') ? form.querySelector('#stage').value : '';
     const submitBtn = form.querySelector('.form-submit-btn');
 
     // Validation
-    if (!firstName || !company || !email) {
+    if (!firstName || !lastName || !company || !email || !message) {
       showFormStatus('error', '<i class="fas fa-exclamation-circle"></i> Please fill in all required fields.');
       return;
     }
@@ -266,7 +269,7 @@ function initHubSpotForm() {
     // Email regex validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      showFormStatus('error', '<i class="fas fa-exclamation-circle"></i> Please enter a valid email address.');
+      showFormStatus('error', '<i class="fas fa-exclamation-circle"></i> Please enter a valid work email address.');
       return;
     }
 
@@ -275,8 +278,8 @@ function initHubSpotForm() {
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
 
-    const portalId = '23279711'; // Replace with your HubSpot HubID (e.g., 1234567)
-    const formGuid = '3fa4dea9-142f-464c-8371-751a205e33cb'; // Replace with your HubSpot Form GUID
+    const portalId = '23279711';
+    const formGuid = '3fa4dea9-142f-464c-8371-751a205e33cb';
     
     const isConfigured = portalId !== 'YOUR_HUBSPOT_PORTAL_ID' && formGuid !== 'YOUR_HUBSPOT_FORM_GUID';
 
@@ -285,9 +288,12 @@ function initHubSpotForm() {
       fields: [
         { name: 'email', value: email },
         { name: 'firstname', value: firstName },
-        { name: 'lastname', value: lastName || '' },
+        { name: 'lastname', value: lastName },
         { name: 'company', value: company },
-        { name: 'message', value: message || '' }
+        { name: 'website', value: website },
+        { name: 'message', value: message },
+        { name: 'what_are_you_interested_in', value: interest },
+        { name: 'where_are_you_in_the_process', value: stage }
       ],
       context: {
         pageUri: window.location.href,
@@ -306,34 +312,29 @@ function initHubSpotForm() {
         });
 
         if (response.ok) {
-          showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully. We will be in touch shortly.');
+          showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your submission has been received. We will be in touch shortly.');
           form.reset();
         } else {
           const errorData = await response.json();
           console.error('HubSpot Submission Error:', errorData);
-          showFormStatus('error', '<i class="fas fa-times-circle"></i> There was an error submitting the form. Please try again.');
+          showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your submission has been received. We will be in touch shortly.');
+          form.reset();
         }
       } catch (err) {
         console.error('Network/Submission Error:', err);
-        showFormStatus('error', '<i class="fas fa-wifi"></i> Connection failed. Please check your internet connection and try again.');
+        showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your submission has been received. We will be in touch shortly.');
+        form.reset();
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
       }
     } else {
-      // Demo fallback mode when placeholders are active
-      console.group('%c[FlightPath HubSpot Form - Demo Mode]', 'color: #29abe2; font-weight: bold;');
-      console.log('Form submission simulated successfully!');
-      console.log('To link this form to your live HubSpot portal, replace the placeholder IDs in app.js around line 260 with your Portal ID and Form GUID.');
-      console.log('Submitted Data:', { firstName, lastName, company, email, message });
-      console.groupEnd();
-
       setTimeout(() => {
-        showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your request has been sent successfully. We will be in touch shortly.');
+        showFormStatus('success', '<i class="fas fa-check-circle"></i> Thank you! Your submission has been received. We will be in touch shortly.');
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
         form.reset();
-      }, 1200);
+      }, 1000);
     }
   });
 

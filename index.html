@@ -871,178 +871,88 @@
         <div class="hex-bg-decor" style="bottom: -60px; right: -60px; transform: rotate(15deg); width: 220px; height: 220px; opacity: 0.05;"></div>
         <h2 class="contact-title">Let's build together</h2>
         <p class="contact-desc">
-          Get in touch with us to request a sandbox demo, learn more about our integrations, or discuss how FlightPath can streamline your giving programs.
+          Tell us a little about your organization and what you're looking to build. We'll connect to learn more about your needs and explore whether FlightPath could be a good fit.
         </p>
         <div class="contact-methods">
-          <a href="mailto:info@flightpathtech.ca?subject=FlightPath%20-%20Lets%20build%20together" class="contact-method">
+          <a href="mailto:info@flightpathtech.ca?subject=FlightPath%20-%20Lets%20talk" class="contact-method">
             <div class="method-icon">
               <i class="fas fa-envelope"></i>
             </div>
             <div class="method-content">
-              <h4>Email Us</h4>
+              <h4>EMAIL US</h4>
               <p>info@flightpathtech.ca</p>
             </div>
           </a>
-
         </div>
       </div>
 
       <!-- Lead Capture Form -->
       <div class="glass form-panel">
         <div class="hex-bg-decor" style="top: -60px; right: -60px; transform: rotate(-30deg); width: 220px; height: 220px; opacity: 0.04;"></div>
-        <h3 class="form-title">Request a Demo</h3>
-        <p class="form-subtitle">Fill in the details below to sync with our integration pipeline.</p>
+        <h3 class="form-title">Let's Talk</h3>
+        <p class="form-subtitle">Tell us a little about what you're looking for and we'll be in touch.</p>
         
-        <!-- =========================================================================
-             HUBSPOT INTEGRATION PLACEHOLDER
-             Since you are building the form in HubSpot later, you can use either option:
-             
-             OPTION A (Forms API / Keep Custom Styles):
-             Keep the beautiful glassmorphic HTML <form> below. When your HubSpot form is ready:
-             1. Find your HubSpot Portal ID and Form GUID.
-             2. Paste them into app.js inside the initHubSpotForm() function (line ~260).
-             3. Make sure form field names in HubSpot match: 'firstname', 'lastname', 'company', 'email'.
-             
-             OPTION B (Standard Script Embed / Default HubSpot Layout):
-             If you prefer to embed the default HubSpot form widget directly:
-             1. Comment out or delete the <form id="lead-form"> block below.
-             2. Uncomment the script tags below and insert your portalId and formId.
-             ========================================================================= -->
-        
-        <!-- HubSpot Embed Code Container -->
-        <div id="hubspot-embed-form"></div>
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            region: "na1",
-            portalId: "23279711",
-            formId: "3fa4dea9-142f-464c-8371-751a205e33cb",
-            target: "#hubspot-embed-form",
-            cssRequired: `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-              
-              .hs-form, .hs-form * {
-                font-family: 'Inter', sans-serif !important;
-                box-sizing: border-box;
-              }
-              
-              .hs-form label, .hs-form legend {
-                font-family: 'Inter', sans-serif !important;
-                font-size: 0.85rem !important;
-                font-weight: 600 !important;
-                color: #475569 !important;
-                letter-spacing: 0.05em !important;
-                text-transform: uppercase !important;
-              }
-              
-              .hs-form label span {
-                color: #64748b !important;
-                font-weight: 400 !important;
-                text-transform: none !important;
-              }
-              
-              .hs-input, .hs-form input, .hs-form textarea, .hs-form select {
-                background: #ffffff !important;
-                border: 1px solid rgba(9, 28, 60, 0.15) !important;
-                border-radius: 8px !important;
-                color: #091c3c !important;
-                font-family: 'Inter', sans-serif !important;
-                font-size: 1rem !important;
-                padding: 0.85rem 1.2rem !important;
-                transition: all 0.2s ease !important;
-                outline: none !important;
-                box-shadow: none !important;
-              }
-              
-              .hs-input:focus, .hs-form input:focus, .hs-form textarea:focus, .hs-form select:focus {
-                background: #ffffff !important;
-                border-color: #008744 !important;
-                box-shadow: none !important;
-              }
-              
-              .hs-button, .hs-submit input, .hs_submit input {
-                display: inline-flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                font-family: 'Inter', sans-serif !important;
-                font-weight: 600 !important;
-                font-size: 0.95rem !important;
-                padding: 0.8rem 1.8rem !important;
-                border-radius: 50px !important;
-                cursor: pointer !important;
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-                border: none !important;
-                background: #091c3c !important;
-                color: #ffffff !important;
-                box-shadow: none !important;
-                width: 100% !important;
-              }
-              
-              .hs-button:hover, .hs-submit input:hover, .hs_submit input:hover {
-                transform: translateY(-1px) !important;
-                background: #0c254e !important;
-                box-shadow: none !important;
-              }
-              
-              .hs-richtext, .hs-field-desc, .hs-legal-consent__row, .hs-main-font-element {
-                font-size: 0.85rem !important;
-                color: #64748b !important;
-                line-height: 1.5 !important;
-              }
-              
-              .submitted-message, .submitted-message * {
-                font-family: 'Outfit', sans-serif !important;
-                font-size: 1.15rem !important;
-                font-weight: 600 !important;
-                color: #091c3c !important;
-                line-height: 1.6 !important;
-                margin-top: 1rem !important;
-                height: auto !important;
-                min-height: auto !important;
-                overflow: visible !important;
-                display: block !important;
-              }`
-          });
-        </script>
-
-        <!-- Custom HTML Form (Commented out in favor of HubSpot Embed script)
         <form id="lead-form" class="contact-form">
           <div class="form-row-2">
             <div class="form-group">
-              <label for="first-name">First Name *</label>
-              <input type="text" id="first-name" class="form-control" placeholder="Jane" required>
+              <label for="first-name">First name *</label>
+              <input type="text" id="first-name" name="firstname" class="form-control" placeholder="First name" required>
             </div>
             <div class="form-group">
-              <label for="last-name">Last Name <span>(Optional)</span></label>
-              <input type="text" id="last-name" class="form-control" placeholder="Doe">
+              <label for="last-name">Last name *</label>
+              <input type="text" id="last-name" name="lastname" class="form-control" placeholder="Last name" required>
             </div>
           </div>
           
-          <div class="form-group">
-            <label for="company">Company / Firm *</label>
-            <input type="text" id="company" class="form-control" placeholder="Acme Wealth Advisory" required>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="email">Work email *</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="work.email@organization.com" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Organization *</label>
+              <input type="text" id="company" name="company" class="form-control" placeholder="Organization name" required>
+            </div>
           </div>
-          
+
           <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" class="form-control" placeholder="jane.doe@acme.com" required>
+            <label for="website">Website <span>(Optional)</span></label>
+            <input type="text" id="website" name="website" class="form-control" placeholder="www.organization.com">
           </div>
 
           <div class="form-group">
-            <label for="message">Message <span>(Optional)</span></label>
-            <textarea id="message" class="form-control" placeholder="Tell us about your firm's giving needs..." rows="3"></textarea>
+            <label for="message">Tell us a little about what you're looking to build or accomplish. *</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Share a few details..." rows="3" required></textarea>
           </div>
 
-          <div class="form-privacy-note">
-            <i class="fas fa-shield-halved"></i> We value your privacy. No spam—we only reach out to schedule a meeting or discuss your giving needs.
+          <div class="form-group">
+            <label for="interest">What are you interested in?</label>
+            <select id="interest" name="interest" class="form-control">
+              <option value="" disabled selected>Select an option...</option>
+              <option value="FlightPath technology">FlightPath technology</option>
+              <option value="GiveWise charitable infrastructure">GiveWise charitable infrastructure</option>
+              <option value="Both">Both</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="stage">Where are you in the process?</label>
+            <select id="stage" name="stage" class="form-control">
+              <option value="" disabled selected>Select an option...</option>
+              <option value="Exploring">Exploring</option>
+              <option value="Planning">Planning</option>
+              <option value="Building">Building</option>
+              <option value="Already operating">Already operating</option>
+            </select>
           </div>
           
           <div id="form-status" class="form-status"></div>
 
-          <button type="submit" class="btn btn-primary form-submit-btn">
-            Submit Request <i class="fas fa-paper-plane"></i>
+          <button type="submit" class="btn btn-primary form-submit-btn" style="letter-spacing: 0.05em; font-weight: 700; width: 100%;">
+            SUBMIT
           </button>
         </form>
-        -->
       </div>
     </div>
   </section>
