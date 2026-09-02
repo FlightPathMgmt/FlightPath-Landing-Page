@@ -283,26 +283,17 @@ function initHubSpotForm() {
     
     const isConfigured = portalId !== 'YOUR_HUBSPOT_PORTAL_ID' && formGuid !== 'YOUR_HUBSPOT_FORM_GUID';
 
-    // Format full message payload including qualification details for HubSpot
-    let formattedMessage = message;
-    
-    const details = [];
-    if (website) details.push(`Website: ${website}`);
-    if (interest) details.push(`Interested in: ${interest}`);
-    if (stage) details.push(`Stage in process: ${stage}`);
-
-    if (details.length > 0) {
-      formattedMessage += `\n\n--- Qualification Details ---\n` + details.join('\n');
-    }
-
     // Prepare HubSpot API payload
     const payload = {
       fields: [
-        { name: 'email', value: email },
         { name: 'firstname', value: firstName },
         { name: 'lastname', value: lastName },
+        { name: 'email', value: email },
         { name: 'company', value: company },
-        { name: 'message', value: formattedMessage }
+        { name: 'website', value: website || '' },
+        { name: 'message', value: message },
+        { name: 'what_are_you_interested_in', value: interest || 'Not specified' },
+        { name: 'where_are_you_in_the_process', value: stage || 'Not specified' }
       ],
       context: {
         pageUri: window.location.href,
