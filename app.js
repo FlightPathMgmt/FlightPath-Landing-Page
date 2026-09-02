@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArchitectureTabs();
   initWorkflowObserver();
   initHubSpotForm();
+  initEmailLink();
 });
 
 /* ==========================================
@@ -342,5 +343,37 @@ function initHubSpotForm() {
     statusEl.classList.add(type);
     statusEl.style.display = 'flex';
   }
+}
+
+/* ==========================================
+   Email Link Mailto & Clipboard Handler
+   ========================================== */
+function initEmailLink() {
+  const emailLink = document.querySelector('.contact-method');
+  if (!emailLink) return;
+
+  const emailTextEl = emailLink.querySelector('.method-content p');
+  if (!emailTextEl) return;
+
+  const emailAddress = 'info@flightpathtech.ca';
+
+  emailLink.addEventListener('click', (e) => {
+    // Copy address to clipboard
+    try {
+      navigator.clipboard.writeText(emailAddress);
+    } catch (err) {
+      console.warn('Clipboard copy warning:', err);
+    }
+
+    // Explicitly trigger mailto draft launch
+    window.location.href = `mailto:${emailAddress}?subject=FlightPath%20-%20Lets%20talk`;
+
+    // Show visual confirmation on screen
+    emailTextEl.innerHTML = '<span style="color: var(--color-accent-green); font-weight: 600;"><i class="fas fa-check"></i> Copied to clipboard & opening mail!</span>';
+    
+    setTimeout(() => {
+      emailTextEl.textContent = emailAddress;
+    }, 3500);
+  });
 }
 
