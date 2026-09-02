@@ -1244,10 +1244,10 @@ header.scrolled .logo-img {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  align-items: stretch;
 }
 
 .team-card {
@@ -1257,7 +1257,8 @@ header.scrolled .logo-img {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1 1 330px;
+  max-width: 365px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
