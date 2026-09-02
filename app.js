@@ -59,25 +59,40 @@ function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  window.addEventListener('scroll', () => {
+  const updateScrollSpy = () => {
     let current = '';
-    const scrollPos = window.scrollY + 200;
+
+    // Check if scrolled near the bottom of the page
+    const isAtBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 280 && rect.bottom >= 120) {
         current = section.getAttribute('id');
       }
     });
 
+    if (isAtBottom) {
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const id = sections[i].getAttribute('id');
+        if (document.querySelector(`.nav-link[href="#${id}"]`)) {
+          current = id;
+          break;
+        }
+      }
+    }
+
     navLinks.forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
+      if (current && link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
       }
     });
-  });
+  };
+
+  window.addEventListener('scroll', updateScrollSpy);
+  window.addEventListener('resize', updateScrollSpy);
+  updateScrollSpy();
 }
 
 /* ==========================================

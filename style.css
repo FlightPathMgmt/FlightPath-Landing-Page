@@ -345,8 +345,9 @@ header.scrolled .logo-img {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background: var(--grad-hero);
+  height: 2.5px;
+  background: var(--color-primary);
+  border-radius: 2px;
   transition: width var(--transition-fast);
 }
 
