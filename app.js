@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initArchitectureTabs();
   initWorkflowObserver();
   initHubSpotForm();
-  initEmailLink();
 });
 
 /* ==========================================
@@ -345,30 +344,3 @@ function initHubSpotForm() {
   }
 }
 
-/* ==========================================
-   Email Link Clipboard Fallback Handler
-   ========================================== */
-function initEmailLink() {
-  const emailLink = document.querySelector('.contact-method');
-  if (!emailLink) return;
-
-  const emailTextEl = emailLink.querySelector('.method-content p');
-  if (!emailTextEl) return;
-
-  const originalEmail = emailTextEl.textContent.trim();
-
-  emailLink.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(originalEmail);
-      
-      // Provide visual feedback
-      emailTextEl.innerHTML = '<span style="color: var(--color-accent-green); font-weight: 600;"><i class="fas fa-check"></i> Copied to clipboard!</span>';
-      
-      setTimeout(() => {
-        emailTextEl.textContent = originalEmail;
-      }, 2500);
-    } catch (err) {
-      console.warn('Clipboard copy failed:', err);
-    }
-  });
-}
