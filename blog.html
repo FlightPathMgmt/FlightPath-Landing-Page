@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights & Thought Leadership | FlightPath</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="Explore FlightPath's latest articles, technical guides, and thought leadership on donor-advised funds, grantmaking infrastructure, and charitable fintech.">
+  <meta name="keywords" content="FlightPath Blog, DAF insights, charitable giving fintech, donor advised funds articles, grantmaking tech">
+  <meta property="og:title" content="Insights & Thought Leadership | FlightPath">
+  <meta property="og:description" content="Explore FlightPath's latest articles and technical guides on donor-advised funds, grantmaking infrastructure, and charitable fintech.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flightpathtech.ca/blog.html">
+  <meta property="og:image" content="https://flightpathtech.ca/logo.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="blog-page">
+
+  <!-- ==========================================
+       Header & Navigation
+       ========================================== -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="FlightPath Logo" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#stats" class="nav-link">Overview</a>
+        <a href="index.html#problem-solution" class="nav-link">The Challenge</a>
+        <a href="index.html#architecture" class="nav-link">Platform</a>
+        <a href="index.html#workflow" class="nav-link">How It Works</a>
+        <a href="index.html#models" class="nav-link">Solutions</a>
+        <a href="blog.html" class="nav-link active">Insights</a>
+        <a href="index.html#leadership" class="nav-link">Team</a>
+        <a href="index.html#contact" class="btn btn-primary">Let's Talk</a>
+      </nav>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Blog Hero Header
+       ========================================== -->
+  <section class="blog-hero-section">
+    <div class="container">
+      <div class="blog-hero-content text-center">
+        <span class="section-tag">Insights & Resources</span>
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">
+          Thought Leadership in <span>Giving Technology</span>
+        </h1>
+        <p class="section-subtitle" style="max-width: 680px; margin: 0 auto 2.5rem;">
+          Articles, research, and engineering perspectives on donor-advised funds, grantmaking infrastructure, and the evolution of digital philanthropy.
+        </p>
+
+        <!-- Search & Filter Controls -->
+        <div class="blog-controls">
+          <div class="blog-search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="blog-search-input" placeholder="Search articles by keyword or topic..." class="blog-search-input">
+          </div>
+          
+          <div class="blog-filter-pills" id="filter-pills">
+            <button class="filter-pill active" data-category="all">All Topics</button>
+            <button class="filter-pill" data-category="DAF Infrastructure">DAF Infrastructure</button>
+            <button class="filter-pill" data-category="Grantmaking & Fintech">Grantmaking & Fintech</button>
+            <button class="filter-pill" data-category="Charitable Operations">Charitable Operations</button>
+            <button class="filter-pill" data-category="Compliance & Security">Compliance & Security</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Featured Article Section
+       ========================================== -->
+  <section class="featured-article-section">
+    <div class="container">
+      <article class="featured-article-card" data-category="DAF Infrastructure" data-article-id="daf-wealth-management">
+        <div class="featured-article-content">
+          <div class="featured-badge-row">
+            <span class="insight-badge">Featured Article</span>
+            <span class="featured-topic">DAF Infrastructure</span>
+            <span class="insight-date"><i class="far fa-clock"></i> 5 min read • Sep 2026</span>
+          </div>
+          <h2 class="featured-title">
+            <a href="#" class="open-article" data-article-id="daf-wealth-management">Modernizing Donor-Advised Funds for Wealth Management</a>
+          </h2>
+          <p class="featured-desc">
+            How financial institutions, wealth managers, and family offices are integrating scalable DAF infrastructure to offer seamless, branded charitable giving directly within existing client portals.
+          </p>
+          <div class="featured-author-row">
+            <div class="author-meta">
+              <span class="author-name">Tammy Kyte</span>
+              <span class="author-role">Co-Founder & President, FlightPath</span>
+            </div>
+            <button class="btn btn-primary open-article" data-article-id="daf-wealth-management">
+              Read Full Article <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Blog Articles Grid
+       ========================================== -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="grid-3 blog-articles-grid" id="articles-grid">
+        
+        <!-- Article 1 -->
+        <article class="glass insight-card blog-card" data-category="DAF Infrastructure" data-article-id="daf-wealth-management">
+          <div class="insight-header">
+            <span class="insight-badge">DAF Infrastructure</span>
+            <span class="insight-date">Sep 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="daf-wealth-management">Modernizing Donor-Advised Funds for Wealth Management</a>
+          </h3>
+          <p class="insight-desc">
+            How financial institutions and family offices are integrating scalable DAF infrastructure to offer seamless, branded charitable giving to high-net-worth clients.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="daf-wealth-management">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="glass insight-card blog-card" data-category="Grantmaking & Fintech" data-article-id="realtime-disbursements">
+          <div class="insight-header">
+            <span class="insight-badge">Grantmaking & Fintech</span>
+            <span class="insight-date">Aug 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="realtime-disbursements">Streamlining Real-Time Charitable Disbursements</a>
+          </h3>
+          <p class="insight-desc">
+            Reducing operational friction and enhancing regulatory compliance in grantmaking through automated payment rails, verification protocols, and custom APIs.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 4 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="realtime-disbursements">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="glass insight-card blog-card" data-category="Charitable Operations" data-article-id="scalable-foundation-tech">
+          <div class="insight-header">
+            <span class="insight-badge">Charitable Operations</span>
+            <span class="insight-date">Jul 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="scalable-foundation-tech">Building Scalable Infrastructure for Foundation Giving</a>
+          </h3>
+          <p class="insight-desc">
+            Key architectural patterns for handling complex grant workflows, multi-currency donations, and real-time ledger reporting across institutional foundation operations.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 6 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="scalable-foundation-tech">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="glass insight-card blog-card" data-category="Compliance & Security" data-article-id="charity-verification-rails">
+          <div class="insight-header">
+            <span class="insight-badge">Compliance & Security</span>
+            <span class="insight-date">Jun 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="charity-verification-rails">Automated Verification & CRA Compliance in Canadian Philanthropy</a>
+          </h3>
+          <p class="insight-desc">
+            Navigating qualified donee validation, real-time registry checks, and audit trails to ensure 100% compliant foundation grantmaking.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="charity-verification-rails">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="glass insight-card blog-card" data-category="Grantmaking & Fintech" data-article-id="future-of-giving-apis">
+          <div class="insight-header">
+            <span class="insight-badge">Grantmaking & Fintech</span>
+            <span class="insight-date">May 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="future-of-giving-apis">The API Economy in Modern Charitable Giving</a>
+          </h3>
+          <p class="insight-desc">
+            Why legacy donor databases are giving way to API-first disbursement engines that integrate seamlessly into wealth management platforms.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 4 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="future-of-giving-apis">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="glass insight-card blog-card" data-category="DAF Infrastructure" data-article-id="family-office-philanthropy">
+          <div class="insight-header">
+            <span class="insight-badge">DAF Infrastructure</span>
+            <span class="insight-date">Apr 2026</span>
+          </div>
+          <h3 class="insight-title">
+            <a href="#" class="open-article" data-article-id="family-office-philanthropy">Empowering Next-Gen Generational Wealth Through DAFs</a>
+          </h3>
+          <p class="insight-desc">
+            How family offices use multi-user donor-advised accounts to engage next-generation heirs in structured, impactful philanthropic grantmaking.
+          </p>
+          <div class="blog-card-footer">
+            <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+            <a href="#" class="insight-link open-article" data-article-id="family-office-philanthropy">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty Search State -->
+      <div id="no-results" class="text-center" style="display: none; padding: 4rem 1rem;">
+        <i class="fas fa-newspaper" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 1rem;"></i>
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-primary);">No matching articles found</h3>
+        <p style="color: var(--text-secondary);">Try adjusting your search keyword or selecting a different category filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Call to Action Section
+       ========================================== -->
+  <section class="blog-cta-section">
+    <div class="container">
+      <div class="glass blog-cta-card text-center">
+        <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 1rem;">Ready to Modernize Your Giving Infrastructure?</h2>
+        <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 2rem;">
+          Connect with our team to discover how FlightPath powers seamless donor experiences and automated charitable disbursements.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1rem;">
+          Let's Talk <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Article Reader Modal Overlay
+       ========================================== -->
+  <div id="article-modal" class="article-modal-overlay">
+    <div class="article-modal-container glass">
+      <button class="modal-close-btn" id="modal-close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="article-modal-body" id="article-modal-body">
+        <!-- Dynamic Content Injected Here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <footer>
+    <div class="container footer-layout">
+      <div class="footer-left">
+        <div class="logo footer-logo">
+          <img src="logo_white.png" alt="FlightPath Logo" class="logo-img">
+        </div>
+        <p class="footer-copy">&copy; 2026 FlightPath Systems. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html#stats" class="footer-nav-link">Overview</a>
+        <a href="index.html#problem-solution" class="footer-nav-link">The Challenge</a>
+        <a href="index.html#architecture" class="footer-nav-link">Platform</a>
+        <a href="index.html#workflow" class="footer-nav-link">How It Works</a>
+        <a href="index.html#models" class="footer-nav-link">Solutions</a>
+        <a href="blog.html" class="footer-nav-link">Insights</a>
+        <a href="index.html#leadership" class="footer-nav-link">Team</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Script Files -->
+  <script src="app.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
