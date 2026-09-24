@@ -83,7 +83,7 @@ const ARTICLES_DATABASE = {
     date: 'September 24, 2026',
     readTime: '5 min read',
     author: 'Mike Christie',
-    role: 'Fractional Chief Technology Officer',
+    role: 'Fractional Chief Technology Officer, FlightPath Technology',
     title: 'What Makes DAF Technology Ready for the Real World?',
     content: `
       <p class="lead-text">A polished interface can show what software does. The architecture underneath it determines how well it will continue to do it as complexity grows.</p>
@@ -163,7 +163,7 @@ const ARTICLES_DATABASE = {
     date: 'September 16, 2026',
     readTime: '7 min read',
     author: 'Tammy Kyte',
-    role: 'Co-Founder & President',
+    role: 'Co-Founder & President, FlightPath Technology',
     title: 'Building DAF Software Is Easy. Operating a DAF Is Hard.',
     content: `
       <p class="lead-text">A polished donor experience matters. But the real test of donor-advised fund technology begins after the donor clicks “Submit.”</p>
