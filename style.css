@@ -1728,6 +1728,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
   section {
     padding: 5rem 0;
   }
@@ -2222,6 +2227,7 @@ footer {
 }
 
 .article-modal-content ul {
+  list-style: disc;
   padding-left: 1.8rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -2230,6 +2236,19 @@ footer {
 .article-modal-content li {
   margin-bottom: 0.8rem;
   line-height: 1.75;
+}
+
+.article-modal-content p a,
+.article-modal-content li a {
+  color: var(--color-accent-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.article-modal-content p a:hover,
+.article-modal-content li a:hover {
+  color: var(--color-primary);
 }
 
 .article-callout {
@@ -2376,6 +2395,7 @@ footer {
 }
 
 .article-main-content ul {
+  list-style: disc;
   padding-left: 1.8rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -2384,6 +2404,19 @@ footer {
 .article-main-content li {
   margin-bottom: 0.85rem;
   line-height: 1.75;
+}
+
+.article-main-content p a,
+.article-main-content li a {
+  color: var(--color-accent-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.article-main-content p a:hover,
+.article-main-content li a:hover {
+  color: var(--color-primary);
 }
 
 .article-closing-statement {

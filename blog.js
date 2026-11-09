@@ -78,6 +78,63 @@ function initBlogSearch() {
    Article Full Reader Modal
    ========================================== */
 const ARTICLES_DATABASE = {
+  'understanding-donor-advised-funds': {
+    category: 'Charitable Operations',
+    date: 'November 9, 2026',
+    readTime: '4 min read',
+    author: '',
+    role: '',
+    title: 'Understanding Donor-Advised Funds: What Organizations Need to Know',
+    content: `
+      <p class="lead-text">Donor-advised funds (DAFs) have become an important part of the charitable giving landscape, offering donors a flexible way to organize and manage their philanthropy.</p>
+      
+      <p>But what exactly is a DAF, and what should organizations know about how they work?</p>
+
+      <h3>What Is a Donor-Advised Fund?</h3>
+      <p>A donor-advised fund is a charitable giving arrangement that allows individuals, families or organizations to contribute to a sponsoring charitable organization and recommend how those funds are distributed to charities over time.</p>
+      
+      <p>In Canada, DAFs are generally established and administered by registered charities, often foundations.</p>
+      
+      <p>Once a contribution is accepted, the sponsoring organization owns and controls the donated assets. Donors may retain advisory privileges, including recommending grants to eligible charities and, depending on the program, providing input on investment preferences.</p>
+      
+      <p>This distinction is important. While donors can recommend how funds are used, the sponsoring organization retains ultimate authority over charitable distributions.</p>
+      
+      <p>For a Canadian example, <a href="https://www.givewise.ca/solutions/donor-advised-funds" target="_blank" rel="noopener">GiveWise Foundation Canada offers donor-advised funds called Giving Funds</a>.</p>
+
+      <h3>How Does a DAF Work?</h3>
+      <p>Although programs vary, the process generally follows five stages:</p>
+      <ul>
+        <li><strong>Contribution:</strong> A donor contributes eligible assets, such as cash or publicly traded securities, to the sponsoring organization.</li>
+        <li><strong>Receipting:</strong> The organization records the contribution and issues an official donation receipt when the gift qualifies under applicable tax rules.</li>
+        <li><strong>Fund administration:</strong> The sponsoring organization maintains records, oversees charitable assets and tracks fund activity.</li>
+        <li><strong>Grant recommendations:</strong> The donor recommends distributions to eligible charities over time.</li>
+        <li><strong>Grant processing:</strong> The sponsoring organization reviews recommendations, confirms eligibility and authorizes distributions.</li>
+      </ul>
+
+      <p>Organizations can explore <a href="https://guide.givewise.ca/policy-and-user-documents/donor-advised-fund-daf-program-guidelines" target="_blank" rel="noopener">GiveWise's DAF Program Guidelines</a> for an example of how a Canadian DAF program documents its operating policies.</p>
+
+      <h3>Who Is Involved in a DAF Program?</h3>
+      <p>DAF programs connect several participants, each with different responsibilities.</p>
+      <ul>
+        <li><strong>Donors</strong> contribute assets, recommend grants and engage in ongoing charitable giving.</li>
+        <li><strong>Financial advisors</strong> may help clients incorporate philanthropy into their financial planning and, depending on the program, support investment-related activities.</li>
+        <li><strong>Program administrators</strong> oversee contributions, fund records, grant recommendations, reporting and donor support.</li>
+        <li><strong>Sponsoring organizations</strong> retain legal control of the charitable assets and responsibility for appropriate oversight and compliance.</li>
+        <li><strong>Recipient charities</strong> receive approved grants to support their charitable work, subject to applicable eligibility requirements, including Canada's rules for <a href="https://www.canada.ca/en/revenue-agency/services/charities-giving/charities/policies-guidance/qualified-donees.html" target="_blank" rel="noopener">qualified donees</a>.</li>
+      </ul>
+
+      <h3>Understanding the Bigger Picture</h3>
+      <p>For donors, DAFs can make charitable giving more organized and flexible. For sponsoring organizations, delivering that experience requires ongoing administration, oversight and coordination.</p>
+      
+      <p>Understanding these different responsibilities is an important starting point for organizations considering a DAF program or looking to strengthen an existing one.</p>
+      
+      <p>At <a href="https://flightpathtech.ca/">FlightPath Technology</a>, our perspective is shaped by real experience operating charitable giving programs through <a href="https://www.givewise.ca/" target="_blank" rel="noopener">GiveWise Foundation Canada</a>.</p>
+
+      <p class="article-closing-statement">
+        Because behind a simple giving experience is an entire system of people, processes and technology working together.
+      </p>
+    `
+  },
   'what-makes-daf-tech-ready-for-real-world': {
     category: 'Grantmaking & Fintech',
     date: 'September 24, 2026',
@@ -307,13 +364,14 @@ function initArticleModal() {
         <span class="insight-date">${data.date} • ${data.readTime}</span>
       </div>
       <h1 class="article-modal-title">${data.title}</h1>
+      ${data.author ? `
       <div class="article-author-info">
         <div class="author-avatar-placeholder"><i class="fas fa-user-circle"></i></div>
         <div>
           <div class="author-name">${data.author}</div>
           <div class="author-role">${data.role}</div>
         </div>
-      </div>
+      </div>` : ''}
       <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 1.8rem 0;">
       <div class="article-modal-content">
         ${data.content}
