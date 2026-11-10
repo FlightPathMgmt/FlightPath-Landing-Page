@@ -25,6 +25,10 @@ function initBlogFilter() {
       let visibleCount = 0;
 
       cards.forEach(card => {
+        if (card.getAttribute('data-scheduled-hidden') === 'true') {
+          card.style.display = 'none';
+          return;
+        }
         const cardCategory = card.getAttribute('data-category');
         if (selectedCategory === 'all' || cardCategory === selectedCategory) {
           card.style.display = 'flex';
@@ -56,6 +60,10 @@ function initBlogSearch() {
     let visibleCount = 0;
 
     cards.forEach(card => {
+      if (card.getAttribute('data-scheduled-hidden') === 'true') {
+        card.style.display = 'none';
+        return;
+      }
       const title = card.querySelector('.insight-title').textContent.toLowerCase();
       const desc = card.querySelector('.insight-desc').textContent.toLowerCase();
       const category = card.getAttribute('data-category').toLowerCase();
@@ -78,6 +86,74 @@ function initBlogSearch() {
    Article Full Reader Modal
    ========================================== */
 const ARTICLES_DATABASE = {
+  'what-does-it-take-to-operate-a-daf-program': {
+    category: 'Charitable Operations',
+    date: 'November 16, 2026',
+    readTime: '4 min read',
+    author: '',
+    role: '',
+    title: 'What Does It Take to Operate a Donor-Advised Fund Program?',
+    content: `
+      <p class="lead-text">Donor-advised funds (DAFs) can offer a straightforward experience for donors. They contribute, recommend grants and follow their charitable giving over time.</p>
+      
+      <p>But behind that experience is a much broader set of operational responsibilities.</p>
+      
+      <p>For organizations managing DAF programs, the challenge isn't simply facilitating donations. It's coordinating the people, processes and information required to administer charitable funds effectively.</p>
+
+      <h3>More Than Accepting Contributions</h3>
+      <p>Operating a DAF program involves several interconnected activities.</p>
+      <ul>
+        <li><strong>Contribution processing and receipting:</strong> Accepting eligible gifts, maintaining accurate records and issuing appropriate donation receipts.</li>
+        <li><strong>Fund administration:</strong> Tracking fund activity, balances, transactions and other financial information.</li>
+        <li><strong>Grantmaking:</strong> Receiving donor recommendations, reviewing requests, approving eligible distributions and maintaining grant records.</li>
+        <li><strong>Donor and advisor relationships:</strong> Providing relevant information and supporting ongoing engagement.</li>
+        <li><strong>Reporting and oversight:</strong> Maintaining records that support financial reporting, compliance and organizational decision-making.</li>
+      </ul>
+
+      <p>These responsibilities don't operate independently.</p>
+      
+      <p>A contribution affects fund records. A grant recommendation requires review and approval. A completed distribution must be reflected accurately across the program's administrative and financial information.</p>
+
+      <h3>Not Every DAF Program Looks the Same</h3>
+      <p>Community foundations, independent charitable foundations and other sponsoring organizations may approach DAF administration differently.</p>
+      
+      <p>Some programs prioritize highly personalized donor relationships. Others manage larger volumes of activity, multiple advisor relationships or specialized administrative requirements.</p>
+      
+      <p>These differences influence how organizations structure their operations and what they need from their technology.</p>
+      
+      <p>A system that works well for one program may not necessarily accommodate the processes of another.</p>
+
+      <h3>Why Technology Matters</h3>
+      <p>For donors, the experience may involve just a few activities: contributing, viewing fund information and recommending grants.</p>
+      
+      <p>For administrators, those activities connect to a much larger operational workflow.</p>
+      
+      <p>When effective operational processes are supported by the right technology, organizations can reduce manual administration, automate routine tasks and improve efficiency across their programs.</p>
+      
+      <p>This can significantly reduce operating costs and help DAF programs scale without a proportional increase in staffing and overhead.</p>
+      
+      <p>But DAF technology should be evaluated beyond its donor-facing features.</p>
+      
+      <p>Organizations should consider whether their systems can support existing processes, handle exceptions, provide relevant information to different users and adapt as program needs evolve.</p>
+      
+      <p>As explored in our article, <a href="what-makes-daf-tech-ready-for-real-world.html">What Makes DAF Technology Ready for the Real World?</a>, supporting charitable giving requires an understanding of what happens behind each transaction.</p>
+
+      <h3>Building for the Future</h3>
+      <p>As DAF programs grow, operational demands can grow alongside them.</p>
+      
+      <p>More donors, advisors, funds and grant activity can introduce additional complexity, particularly when organizations rely on disconnected systems or manual processes.</p>
+      
+      <p>Having the right operational infrastructure can help organizations manage these responsibilities while preparing for future growth.</p>
+      
+      <p>At FlightPath Technology, our approach is informed by hands-on experience operating charitable giving programs through <a href="https://www.givewise.ca/" target="_blank" rel="noopener">GiveWise Foundation Canada</a>.</p>
+      
+      <p>We understand that effective DAF technology needs to support not only the donor experience, but also the practical realities of administering charitable giving.</p>
+
+      <p class="article-closing-statement">
+        Learn more about <a href="https://flightpathtech.ca/" style="color: var(--color-accent-green); text-decoration: underline; text-underline-offset: 3px;">FlightPath Technology</a>.
+      </p>
+    `
+  },
   'understanding-donor-advised-funds': {
     category: 'Charitable Operations',
     date: 'November 9, 2026',

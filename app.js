@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScheduledPosts();
   initHeaderScroll();
   initMobileMenu();
   initScrollSpy();
@@ -13,6 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
   initHubSpotForm();
   initEmailLink();
 });
+
+/* ==========================================
+   Scheduled Blog Posts Handler
+   ========================================== */
+function initScheduledPosts() {
+  const now = new Date();
+  const params = new URLSearchParams(window.location.search);
+  const isPreview = params.get('preview') === 'true';
+
+  document.querySelectorAll('[data-publish-date]').forEach(el => {
+    const pubDateStr = el.getAttribute('data-publish-date');
+    const pubDate = new Date(pubDateStr + 'T00:00:00');
+    if (isPreview || now >= pubDate) {
+      el.style.display = '';
+      el.removeAttribute('data-scheduled-hidden');
+    } else {
+      el.style.display = 'none';
+      el.setAttribute('data-scheduled-hidden', 'true');
+    }
+  });
+
+  document.querySelectorAll('[data-hide-after]').forEach(el => {
+    const hideDateStr = el.getAttribute('data-hide-after');
+    const hideDate = new Date(hideDateStr + 'T00:00:00');
+    if (isPreview || now >= hideDate) {
+      el.style.display = 'none';
+      el.setAttribute('data-scheduled-hidden', 'true');
+    }
+  });
+}
 
 /* ==========================================
    Header Scroll State
